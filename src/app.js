@@ -13,13 +13,12 @@ let when = [
   "right on time",
   "when I finished",
   "during my lunch",
-  "while I was praying"
+  "while I was praying",
 ];
 
 window.onload = function() {
-  //write your code here
-  let excuse = document.getElementById("excuse2");
-  // pillamos una salida aleatoria de cada array con un numero aleatorio
+  let finalExcuse = document.getElementById("excuse2");
+  //pillamos una salida aleatoria de cada array con un numero aleatorio
   let randomNumberWho = Math.floor(Math.random() * who.length);
   let randomNumberAction = Math.floor(Math.random() * action.length);
   let randomNumberWhat = Math.floor(Math.random() * what.length);
@@ -29,7 +28,6 @@ window.onload = function() {
   let randomAction = action[randomNumberAction];
   let randomWhat = what[randomNumberWhat];
   let randomWhen = when[randomNumberWhen];
-  // cambiamos la excusa
-  excuse.textContent =
-    randomWho + " " + randomAction + " " + randomWhat + " " + randomWhen;
+
+  finalExcuse.textContent = `${randomWho} ${randomAction} ${randomWhat} ${randomWhen}`;
 };
